@@ -12,6 +12,7 @@
 
 ![](localhost_3000_.png)
 ![](localhost_3000_restaurants_8.png)
+![](localhost_3000_search_keyword.png)
 
 ## Installing 安裝
 
