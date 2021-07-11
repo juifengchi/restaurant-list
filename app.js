@@ -80,6 +80,7 @@ app.post('/restaurants/:id/edit', (req, res) => {
   const phone = req.body.phone
   const googleMap = req.body.google_map
   const rating = req.body.rating
+  const description = req.body.description
   Restaurant.findById(id)
     .then(restaurant => {
       restaurant.name = name
@@ -90,16 +91,20 @@ app.post('/restaurants/:id/edit', (req, res) => {
       restaurant.phone = phone
       restaurant.google_map = googleMap
       restaurant.rating = rating
+      restaurant.description = description
       return restaurant.save()
     })
     .then(() => res.redirect(`/restaurants/${id}`))
     .catch(error => console.error(error))
 })
 
-// app.get('/restaurants/:restaurant_id', (req, res) => {
-//   const restaurant = restaurantList.results.find(restaurant => restaurant.id.toString() === req.params.restaurant_id)
-//   res.render('show', { restaurant })
-// })
+app.post('/restaurants/:id/delete', (req, res) => {
+  const id = req.params.id
+  Restaurant.findById(id)
+    .then(restaurant => restaurant.remove())
+    .then(() => res.redirect('/'))
+    .catch(error => console.error(error))
+})
 
 // app.get('/search', (req, res) => {
 //   const keyword = req.query.keyword

@@ -41,8 +41,11 @@
                 </span>
               </div>
             </a>
-            <div class="d-flex justify-content-around align-items-center mb-1">
+            <div class="d-flex justify-content-around align-items-start">
               <a class="btn btn-secondary" href="/restaurants/{{this._id}}/edit" role="button">編輯</a>
+              <form action="/restaurants/{{this._id}}/delete" method="POST">
+                <button type="submit" class="btn btn-danger">刪除</button>
+              </form>
             </div>
           </div>
         {{/each}}
