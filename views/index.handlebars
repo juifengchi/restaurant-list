@@ -41,10 +41,11 @@
                 </span>
               </div>
             </a>
-            <div class="d-flex justify-content-around align-items-start">
-              <a class="btn btn-secondary" href="/restaurants/{{this._id}}/edit" role="button">編輯</a>
+            <div class="d-flex justify-content-end align-items-start">
+              <a class="btn btn-secondary mx-1" href="/restaurants/{{this._id}}/edit" role="button">編輯</a>
+              <a class="btn btn-info mx-1" href="/restaurants/{{this._id}}" role="button">詳細</a>
               <form action="/restaurants/{{this._id}}/delete" method="POST">
-                <button type="submit" class="btn btn-danger">刪除</button>
+                <button type="submit" class="btn btn-danger mx-1">刪除</button>
               </form>
             </div>
           </div>
