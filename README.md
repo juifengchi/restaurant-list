@@ -1,18 +1,20 @@
 # Restaurant List 餐廳清單
 
-透過 Node.js 和 Express 打造的餐廳資訊網，提供各位吃貨們尋覓台北市的美食佳餚。
+透過 Node.js/ Express/ MongoDB 打造的餐廳資訊網
 
 ## Features 功能
 
-- 使用者可以在首頁看到所有餐廳與它們的簡單資料，包含照片、名稱、分類、評分
-- 使用者可以再點進去看餐廳的詳細資訊，包含類別、地址、電話、描述、圖片
+- 使用者可以新增一家餐廳
+- 使用者可以瀏覽一家餐廳的詳細資訊
+- 使用者可以瀏覽全部所有餐廳
+- 使用者可以修改一家餐廳的資訊
+- 使用者可以刪除一家餐廳
 - 使用者可以透過搜尋餐廳名稱或類別來找到特定的餐廳
 
 ## Preview 畫面預覽
 
 ![](localhost_3000_.png)
-![](localhost_3000_restaurants_8.png)
-![](localhost_3000_search_keyword.png)
+
 
 ## Installing 安裝
 
@@ -40,8 +42,8 @@ npm install
 npm run dev
 ```
 
-5. 出現以下訊息即可打開瀏覽器輸入 http://localhost:3000/ 開始使用
+5. 出現以下訊息即可打開瀏覽器輸入 http://localhost:3000 開始使用
 
 ```
-Express is listening on localhost:3000
+Express is listening on http://localhost:3000
 ```
