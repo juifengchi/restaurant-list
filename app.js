@@ -49,8 +49,16 @@ app.post('/restaurants', (req, res) => {
   const googleMap = req.body.google_map
   const rating = req.body.rating
   const description = req.body.description
-  Restaurant.create({ name, nameEn, category, image, location, phone, googleMap, rating, description })
+  Restaurant.create({ name, name_en: nameEn, category, image, location, phone, google_map: googleMap, rating, description })
     .then(() => res.redirect('/'))
+    .catch(error => console.error(error))
+})
+
+app.get('/restaurants/:id', (req, res) => {
+  const id = req.params.id
+  Restaurant.findById(id)
+    .lean()
+    .then((restaurant) => res.render('show', { restaurant }))
     .catch(error => console.error(error))
 })
 
