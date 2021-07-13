@@ -36,13 +36,19 @@ cd restaurant-list
 npm install
 ```
 
-4. 啟動伺服器來執行專案
+4. 加入種子資料
+
+```
+npm run seed
+```
+
+5. 啟動伺服器來執行專案
 
 ```
 npm run dev
 ```
 
-5. 出現以下訊息即可打開瀏覽器輸入 http://localhost:3000 開始使用
+6. 出現以下訊息即可打開瀏覽器輸入 http://localhost:3000 開始使用
 
 ```
 Express is listening on http://localhost:3000
