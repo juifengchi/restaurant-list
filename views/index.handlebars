@@ -15,7 +15,7 @@
       <div class="input-group">
         <select class="form-control" name="sortBy" onchange="submit()">
           {{#each sortList}}
-            <option value="{{this.value}}" {{#if (isEqual sort this.value)}}selected{{/if}}>{{this.item}}</option>
+            <option value="{{this.value}}" {{#if (isEqual sortBy this.value)}}selected{{/if}}>{{this.item}}</option>
           {{/each}}
         </select>
       </div>
