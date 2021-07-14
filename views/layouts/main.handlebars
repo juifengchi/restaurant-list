@@ -11,11 +11,14 @@
   <body>
     <!-- navigation -->
     <nav class="navbar navbar-light bg-light">
-      <div class="container">
+      <div class="container d-flex justify-center-between align-items-center">
         <a class="navbar-brand" href="/">
           <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png" width="30" height="30" class="d-inline-block align-top" alt="我的餐廳清單" />
           我的餐廳清單
         </a>
+        {{#if restaurants}}
+        <a class="btn btn-primary" href="/restaurants/new" role="button">新增</a>
+        {{/if}}
       </div>
     </nav>
 
@@ -25,6 +28,21 @@
     {{{body}}}
 
     <!-- include javascript files -->
+    <script>
+      const submitButton = document.querySelector('#submit-button')
+      const form = document.querySelector('#form')
+      
+      submitButton.addEventListener('click', function onSubmitButtonClicked(event) {
+        form.classList.add('was-validated')
+      })
+
+      form.addEventListener('submit', function onFormSubmitted(event) {
+        if (!form.checkValidity()) {
+          event.stopPropagation()
+          event.preventDefault()
+        }
+      })
+    </script>
     <script src="/javascripts/jquery-3.3.1.js"></script>
     <script src="/javascripts/popper.js"></script>
     <script src="/javascripts/bootstrap.js"></script>
