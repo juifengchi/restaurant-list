@@ -8,7 +8,17 @@ require('./config/mongoose')
 const app = express()
 const port = 3000
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.engine(
+  'handlebars',
+  exphbs({
+    defaultLayout: 'main',
+    helpers: {
+      isEqual: function (x, y) {
+        return x === y
+      }
+    }
+  })
+)
 app.set('view engine', 'handlebars')
 
 app.use(express.static('public'))
