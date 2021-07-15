@@ -46,7 +46,7 @@ router.get('/search', (req, res) => {
     .lean()
     .sort(sortList[sortBy].order)
     .then(restaurants => {
-      restaurants = restaurants.filter(restaurant => restaurant.name.toLowerCase().includes(keyword.toLowerCase()) || restaurant.category.toLowerCase().includes(keyword.toLowerCase()))
+      restaurants = restaurants.filter(restaurant => restaurant.name.toLowerCase().includes(keyword.toLowerCase()) || restaurant.category.toLowerCase().includes(keyword.toLowerCase()) || restaurant.name_en.toLowerCase().includes(keyword.toLowerCase()))
       res.render('index', { restaurants, sortList, keyword, sortBy })
     })
     .catch(error => console.error(error))
