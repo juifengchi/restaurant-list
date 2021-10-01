@@ -1,8 +1,8 @@
-# Restaurant List 餐廳清單
+# Restaurant List
 
 透過 Node.js/ Express/ MongoDB 打造的餐廳資訊網
 
-## Features 功能
+## Features
 
 - 使用者可以新增一家餐廳
 - 使用者可以瀏覽一家餐廳的詳細資訊
@@ -12,12 +12,18 @@
 - 使用者可以透過搜尋餐廳名稱或類別來找到特定的餐廳
 - 使用者可以設定餐廳排序
 
-## Preview 畫面預覽
+## Preview
 
 ![](localhost_3000_.png)
 
+## Prerequisites
 
-## Installing 安裝
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+
+## Installing
 
 1. 打開終端機 (Terminal) 輸入以下訊息，下載專案至本機
 
