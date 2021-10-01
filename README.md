@@ -18,10 +18,10 @@
 
 ## Prerequisites
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en/)
-- [Express](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
+- Express v4.17.1
+- Express-Handlebars v5.3.2
+- Method-Override v3.0.0
+- Mongoose v5.13.2
 
 ## Installing
 
