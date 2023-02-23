@@ -28,7 +28,7 @@
 1. 打開終端機 (Terminal) 輸入以下訊息，下載專案至本機
 
 ```
-git clone https://github.com/ravenera0317/restaurant-list.git
+git clone https://github.com/juifengchi/restaurant-list.git
 ```
 
 2. 進入專案目錄資料夾
